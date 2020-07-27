@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="white">@android:color/white</color>
+    <color name="green">#05D39B</color>
+    <color name="vividorange">#f9ba0a</color>
+    <color name="vividred">#EF1E48</color>
+    <color name="white1">#FFFFFF</color>
+    <color name="text_color_tertiary">#1E2C31</color>
+
+
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+</resources>

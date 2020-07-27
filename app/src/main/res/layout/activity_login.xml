@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_img"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="39dp"
+        android:layout_gravity="center"
+        android:layout_marginLeft="19dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="19dp"
+        android:background="@drawable/vivid_red_rounded_rectangle"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/txtHotlineTiltle_user_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/crisis_hotline"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/txtHotlinenumber_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/txtHotlineTiltle_user_login"
+            android:hint="1-800-273-8255"
+            android:layout_marginRight="5dp"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="113dp"
+        android:layout_height="138dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="36dp"
+        android:src="@drawable/nami_logo_wht" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="27dp"
+        android:text="@string/login"
+        android:textColor="@color/green"
+        android:textSize="30sp" />
+
+    <EditText
+        android:id="@+id/edUserId_login_user"
+        android:layout_width="297dp"
+        android:layout_height="45dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="34dp"
+        android:background="@drawable/white_rounded_rectangle"
+        android:gravity="start|center_vertical"
+        android:hint="@string/user_id"
+        android:imeOptions="actionDone"
+        android:inputType="number"
+        android:maxLength="8"
+        android:paddingStart="27dp"
+        android:paddingEnd="27dp"
+        android:singleLine="true"
+        android:textColor="@color/colorPrimary"
+        android:textColorHint="@color/text_color_tertiary" />
+
+    <EditText
+        android:id="@+id/edPassword_login_user"
+        android:layout_width="297dp"
+        android:layout_height="45dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+        android:autofillHints=""
+        android:background="@drawable/white_rounded_rectangle"
+        android:hint="@string/password"
+        android:imeOptions="actionNext"
+        android:inputType="textWebPassword"
+        android:maxLength="18"
+        android:paddingStart="27dp"
+        android:paddingEnd="27dp"
+        android:singleLine="true"
+        android:textColor="@color/colorPrimary"
+        android:textColorHint="@color/text_color_tertiary" />
+
+    <LinearLayout
+        android:layout_width="297dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="19dp"
+        android:gravity="center_vertical"
+        android:weightSum="1">
+
+        <CheckBox
+            android:id="@+id/chkReminderme_login_user"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:button="@drawable/chk_remember_me"
+            android:paddingStart="12dp"
+            android:paddingLeft="12dp"
+            android:text="@string/remember_me"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/txtForgotPassword_login_user"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:gravity="end"
+            android:text="@string/forget_password"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/btnLogin_user_login"
+        android:layout_width="297dp"
+        android:layout_height="45dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/green_rounded_rectangle"
+        android:text="@string/login"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+
+    <LinearLayout
+        android:id="@+id/txtRegister_user_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="24dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="22dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@string/don_t_have_an_account"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="22dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="@string/register"
+            android:textColor="@color/vividorange"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+</LinearLayout>

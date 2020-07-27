@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@drawable/bg_img"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="105dp"
+        android:layout_height="138dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="55dp"
+        android:contentDescription="TODO"
+        android:src="@drawable/nami_logo_wht" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp"
+        android:text="@string/verification"
+        android:textColor="@color/green"
+        android:textSize="30sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:text="2 Step verification Using Google Authenticator"
+        android:textColor="@color/white"
+        android:textSize="14sp" />
+
+    <EditText
+        android:layout_width="297dp"
+        android:layout_height="45dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="29dp"
+        android:autofillHints=""
+        android:background="@drawable/white_rounded_rectangle"
+        android:hint="Enter Code"
+        android:imeOptions="actionNext"
+        android:inputType="number"
+        android:maxLength="18"
+        android:paddingStart="27dp"
+        android:paddingEnd="27dp"
+        android:singleLine="true"
+        android:textColor="@color/colorPrimary"
+        android:textColorHint="@color/text_color_tertiary" />
+
+    <ImageView
+        android:layout_width="102dp"
+        android:layout_height="102dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="29dp"
+        android:src="@drawable/ic_launcher_background" />
+
+    <Button
+        android:id="@+id/btnLogin_verify_user"
+        android:layout_width="297dp"
+        android:layout_height="45dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="29dp"
+        android:background="@drawable/green_rounded_rectangle"
+        android:text="@string/next"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+
+
+    <TextView
+        android:id="@+id/txtCancel_user_verify"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="29dp"
+        android:text="CANCEL"
+        android:textColor="@color/vividorange"
+        android:textSize="18sp" />
+</LinearLayout>

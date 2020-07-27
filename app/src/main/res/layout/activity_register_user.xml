@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_img"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="113dp"
+        android:layout_height="138dp"
+        android:layout_gravity="center"
+        android:src="@drawable/nami_logo_wht" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:text="Register"
+        android:textColor="@color/green"
+        android:textSize="30sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="39dp"
+        android:layout_marginBottom="46dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/step_three_view_first"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:background="@drawable/step_view_circle"
+            android:gravity="center"
+            android:text="1"
+            android:textColor="#212121" />
+
+        <View
+            android:id="@+id/setp_three_line_view_first"
+            android:layout_width="61dp"
+            android:layout_height="2dp"
+            android:background="#FFFFFF" />
+
+        <TextView
+            android:id="@+id/step_three_view_two"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:background="@drawable/step_view_circle"
+            android:gravity="center"
+            android:text="2" />
+
+        <View
+            android:id="@+id/setp_three_line_view_second"
+            android:layout_width="61dp"
+            android:layout_height="2dp"
+            android:background="#FFFFFF" />
+
+        <TextView
+            android:id="@+id/step_three_view_three"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:background="@drawable/step_view_green_circle"
+            android:gravity="center"
+            android:text="3" />
+
+    </LinearLayout>
+
+
+    <EditText
+
+        android:layout_width="297dp"
+        android:layout_height="45dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="45dp"
+        android:autofillHints=""
+        android:background="@drawable/white_rounded_rectangle"
+        android:hint="@string/email_id"
+        android:imeOptions="actionNext"
+        android:inputType="text"
+        android:maxLength="18"
+        android:paddingStart="27dp"
+        android:paddingEnd="27dp"
+        android:singleLine="true"
+        android:textColor="@color/colorPrimary"
+        android:textColorHint="@color/text_color_tertiary" />
+
+    <EditText
+        android:layout_width="297dp"
+        android:layout_height="45dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="19dp"
+        android:autofillHints=""
+        android:background="@drawable/white_rounded_rectangle"
+        android:hint="@string/mobile_number"
+        android:imeOptions="actionNext"
+        android:inputType="text"
+        android:maxLength="18"
+        android:paddingStart="27dp"
+        android:paddingEnd="27dp"
+        android:singleLine="true"
+        android:textColor="@color/colorPrimary"
+        android:textColorHint="@color/text_color_tertiary" />
+
+    <CheckBox
+        android:layout_width="297dp"
+        android:layout_height="45dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:text="I accept terms and conditionds"
+        android:textColor="@color/white"
+        android:textSize="14sp" />
+
+    <Button
+        android:id="@+id/btnRegister_user"
+        android:layout_width="297dp"
+        android:layout_height="45dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/green_rounded_rectangle"
+        android:text="@string/submit"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+
+
+    <TextView
+        android:id="@+id/txtBack_step_two_register_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="29dp"
+        android:text="BACK"
+        android:textColor="@color/vividorange"
+        android:textSize="18sp" />
+
+
+</LinearLayout>
