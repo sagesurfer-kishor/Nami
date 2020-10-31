@@ -24,7 +24,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-       android:layout_marginTop="39dp"
+        android:layout_marginTop="39dp"
         android:layout_marginBottom="46dp"
         android:gravity="center"
         android:orientation="horizontal">
@@ -70,11 +70,10 @@
 
 
     <EditText
-
+        android:id="@+id/edFirstName_register_user"
         android:layout_width="297dp"
         android:layout_height="45dp"
         android:layout_gravity="center"
-
         android:autofillHints=""
         android:background="@drawable/white_rounded_rectangle"
         android:hint="@string/first_name"
@@ -84,10 +83,11 @@
         android:paddingStart="27dp"
         android:paddingEnd="27dp"
         android:singleLine="true"
-        android:textColor="@color/colorPrimary"
+        android:textColor="@color/text_color_tertiary"
         android:textColorHint="@color/text_color_tertiary" />
 
     <EditText
+        android:id="@+id/edLastName_register_user"
         android:layout_width="297dp"
         android:layout_height="45dp"
         android:layout_gravity="center"
@@ -101,7 +101,7 @@
         android:paddingStart="27dp"
         android:paddingEnd="27dp"
         android:singleLine="true"
-        android:textColor="@color/colorPrimary"
+        android:textColor="@color/text_color_tertiary"
         android:textColorHint="@color/text_color_tertiary" />
 
 

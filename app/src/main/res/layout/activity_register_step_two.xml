@@ -70,7 +70,7 @@
 
 
     <EditText
-
+        android:id="@+id/edEmail_register_user"
         android:layout_width="297dp"
         android:layout_height="45dp"
         android:layout_gravity="center"
@@ -80,14 +80,14 @@
         android:hint="@string/email_id"
         android:imeOptions="actionNext"
         android:inputType="text"
-        android:maxLength="18"
         android:paddingStart="27dp"
         android:paddingEnd="27dp"
         android:singleLine="true"
-        android:textColor="@color/colorPrimary"
+        android:textColor="@color/text_color_tertiary"
         android:textColorHint="@color/text_color_tertiary" />
 
     <EditText
+        android:id="@+id/edmobileNumber_register_user"
         android:layout_width="297dp"
         android:layout_height="45dp"
         android:layout_gravity="center"
@@ -96,12 +96,12 @@
         android:background="@drawable/white_rounded_rectangle"
         android:hint="@string/mobile_number"
         android:imeOptions="actionNext"
-        android:inputType="text"
+        android:inputType="number"
         android:maxLength="18"
         android:paddingStart="27dp"
         android:paddingEnd="27dp"
         android:singleLine="true"
-        android:textColor="@color/colorPrimary"
+        android:textColor="@color/text_color_tertiary"
         android:textColorHint="@color/text_color_tertiary" />
 
 

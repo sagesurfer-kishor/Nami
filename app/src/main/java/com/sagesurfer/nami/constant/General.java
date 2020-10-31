@@ -4,10 +4,13 @@ package com.sagesurfer.nami.constant;
 import com.sagesurfer.nami.storage.preferences.Preferences;
 
 
-
 public class General {
 
+    public static final String USERID = "userid";
     public static final String USER_ID = "user_id";
+    public static final String DEBUG = "debug";
+    public static final String HOTLINE = "helplineno";
+
     public static final String CONTENT_TYPE = "content_type";
     public static final String CONTENT_PATH = "content_path";
     public static final String LOG_ID = "log_id";
@@ -40,7 +43,7 @@ public class General {
     public static final String CUSTOM_MSG = "custom_msg";
     public static final String QUOTE_NAME = "name";
     public static final String AUTHER_NAME = "author_name";
-    public static final String USERNAME = "username";
+
     public static final String INSTANCE_KEY = "instance_key";
     public static final String DOMAIN = "domain";
     public static final String DOMAIN_CODE = "domain_code";
@@ -51,7 +54,7 @@ public class General {
     public static final String DEVICE = "device";
     public static final String UID = "uid";
     public static final String INFO = "info";
-    public static final String START_TIME = "start_time";
+
     public static final String END_TIME = "end_time";
     public static final String IP = "ip";
     public static final String CHAT_URL = "chat_url";
@@ -703,74 +706,11 @@ public class General {
     public static final String USER_ROLE_RESOURCE_CONTACT = "61";
     public static final String USER_ROLE_COMMUNITY_CONTACT = "63";
 
-    // SelfGOal Status ID
-    public static final int GOAL_TYPE_NON_BINARY = 0;
-    public static final int GOAL_TYPE_BINARY = 1;
-    public static final int GOAL_TYPE_GLOBULE = 2;
 
 
-    public static final int GOAL_STATUS_TYPE_RUNNING = 0;
-    public static final int GOAL_STATUS_TYPE_COMPLETE = 1;
-    public static final int GOAL_STATUS_TYPE_MISSED_OUT = 2;
-
-
-    // Senjam Instance
-    public static final String PATIENT_ID = "patient_id";
-    public static final String ANSWER_ID = "answer_id";
-    public static final String ANSWER_NAME = "answer_name";
-    public static final String SOW_ID = "sow_id";
-    public static final String UPDATED_DATE = "updated_date";
-    public static final String YES = "yes";
-    public static final String NO = "no";
-    public static final String AM_MSG = "am_msg";
-    public static final String PM_MSG = "pm_msg";
-    public static final String GOAL_STATUS_ID = "goal_status_id";
-    public static final String GOAL_STATUS_ID_COMPLETE = "1";
-    public static final String GOAL_STATUS_ID_PARTIAL_COMPLETE = "2";
-    public static final String GOAL_STATUS_ID_INCOMPLETE = "3";
-    public static final String GOAL_STATUS_ID_INPUT_NEEDED = "3";
-    public static final String GOAL_STATUS_ID_MISSED = "4";
-    public static final String GOAL_STATUS_COMPLETE = "Complete";
-    public static final String GOAL_STATUS_PARTIAL_COMPLETE = "Partial Complete";
-    public static final String GOAL_STATUS_INCOMPLETE = "Incomplete";
-    public static final String ANS_IDS = "ans_ids";
-    public static final String SHOW_DAILY_DOSAGE = "show_daily_dosage";
-    public static final String SHOW_DAILY_DOSAGE_FILLED = "show_daily_dosage_filled";
-    public static final String IS_SHOW_SOWS = "is_show_sows";
-    public static final String SHOW_SOWS_FILLED = "show_sows_filled";
-    public static final String USER_ROLL_SENJAM_PATIENT = "32";
-    public static final String USER_ROLL_SENJAM_CLINICIAN = "6";
-    public static final String SENJAM_GOAL_ID = "senjam_goal_id";
-    public static final String ON_DATE = "on_date";
-    public static final String HEADING = "heading";
-    public static final String HEADING_DETAILS = "heading_details";
-    public static final String SHOW_PRIVACY_POPUP = "show_privacy_popup";
-    public static final String SHOW_PRIVACY_POPUP_FILLED = "show_privacy_popup_filled";
-    public static final String PRIVACY_URL = "privacy_url";
-    public static final String SHOW_ONE_TIME_SURVEY = "show_one_time_survey";
-    public static final String SHOW_ONE_TIME_SURVEY_FILLED = "show_one_time_survey_filled";
-    public static final String SHOW_DAILY_SURVEY = "show_daily_survey";
-    public static final String SHOW_DAILY_SURVEY_FILLED = "show_daily_survey_filled";
-    public static final String ANS_ID = "ans_id";
-    public static final String ANS = "ans";
-    public static final String OPTIONS = "options";
-    public static final String QUESTIONS = "questions";
-    public static final String RATE_YOUR_IMMUNE_FITNESS = "rate_your_immune_fitness";
-    public static final String RESPIRATORY_INFECTION_SYMPTOM = "respiratory_infection_symptom";
-    public static final String COVID_19_SPECIFIC_QUESTION = "COVID_19_specific_questions";
-    public static final String COVID = "covid";
-    public static final String COVID_NO = "0";
-    public static final String COVID_MODERATE = "1";
-    public static final String COVID_SEVERE = "2";
-    public static final String TODAY_STATUS = "today_status";
-    public static final String DAILY_DOSING_STATUS = "daily_dosing_status";
-    public static final String GOAL_AM_PM = "am_pm";
-    public static final String COMPLETED = "completed";
-    public static final String PARTIALCOMPLETED = "partialcompleted";
-    public static final String MISSED = "missed";
-    public static final String INPUTNEEDED = "inputneeded";
-    public static final String AM_PM = "ampm";
-    public static final String AM_PM_MESSAGE = "ampm_msg";
+    public static final String TERMS = "terms";
+    public static final String USERNAME = "username";
+    public static final String NEW_PASSWORD = "new_password";
 
 
     public static boolean isCurruntUserHasPermissionToOnlyViewCantPerformAnyAction() {

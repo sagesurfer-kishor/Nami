@@ -6,7 +6,6 @@ import android.util.Log;
 import com.sagesurfer.nami.storage.preferences.Preferences;
 
 
-
 public class Logger {
 
     public static void debug(String tag, String message, Context _context) {
@@ -29,7 +28,6 @@ public class Logger {
             Log.v(tag, message);
         }
     }
-
 
     public static void error(String tag, String message, Context _context) {
         Preferences.initialize(_context);

@@ -6,11 +6,11 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.AsyncTask;
-import android.util.Log;
 
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
+import com.sagesurfer.nami.Activity.LoginActivity;
 import com.sagesurfer.nami.constant.General;
 import com.sagesurfer.nami.constant.Oauth;
 import com.sagesurfer.nami.library.DeviceInfo;
@@ -21,7 +21,7 @@ import com.sagesurfer.nami.secure.KeyMaker_;
 import com.sagesurfer.nami.secure.UrlEncoder_;
 import com.sagesurfer.nami.storage.preferences.OauthPreferences;
 import com.sagesurfer.nami.storage.preferences.Preferences;
-
+import com.sagesurfer.nami.tasks.PerformLogoutTask;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -31,7 +31,6 @@ import java.util.HashMap;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
-
 import okhttp3.FormBody;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
@@ -39,11 +38,6 @@ import okhttp3.RequestBody;
 import okhttp3.Response;
 import okio.Buffer;
 
-/**
- * @author Monika M (monikam@sagesurfer.com)
- * Created on 13/03/2018
- * Last Modified on
- */
 
 @SuppressWarnings("ConstantConditions")
 public class NetworkCall_ {
@@ -80,7 +74,7 @@ public class NetworkCall_ {
         Logger.debug(tag, url + "?" + body, _context);
         String token = getToken(_context);
         if (token != null) {
-            return finalBody(body, token);
+            return finalBody(body);
         }
         return null;
     }
@@ -104,11 +98,13 @@ public class NetworkCall_ {
                 .build();
         String body = bodyToString(request);
         Logger.debug(tag, url + "?" + body, _context);
-        String token = getToken(_context);
+        return finalBody(body);
+
+      /*  String token = getToken(_context);
         if (token != null) {
-            return finalBody(body, token);
+            return finalBody(body);
         }
-        return null;
+        return null;*/
     }
 
     public static RequestBody make_one(HashMap<String, String> map, String url, String tag,
@@ -171,7 +167,60 @@ public class NetworkCall_ {
                     JsonObject jsonObject1 = jelement.getAsJsonObject();
                     JSONObject jsonObject = new JSONObject(res);
                     Logger.debug(tag, res, _context);
+                    if (response.isSuccessful()) {
+                        if (jsonObject.has(General.STATUS) && jsonObject.getInt(General.STATUS) == 13) {
+                            return "13";
+                        } else if (jsonObject.has(General.STATUS) && jsonObject.getInt(General.STATUS) == 21) {
+                            PerformLogoutTask.logout(activity);
+                        } else if (jsonObject.has(General.STATUS) && jsonObject.getInt(General.STATUS) == 20) {
+                            //Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=" + my_packagename));
+                            final String appPackageName = _context.getPackageName(); // getPackageName() from Context or Activity object
 
+                        } else if (jsonObject1.has("details")) {
+                            try {
+                                JsonObject object = jsonObject1.get("details").getAsJsonObject();
+                                //JsonArray  jarray = jsonObject1.get("details").getAsJsonArray();
+                                //JsonObject object = jarray.get(0).getAsJsonObject();
+                                if (object.has(General.STATUS) && object.get(General.STATUS).getAsInt() == 21) {
+                                    //PerformLogoutTask.logout(activity);
+                                    HashMap<String, String> keyMap = KeyMaker_.getKey();
+                                    RequestBody logoutBody = new FormBody.Builder()
+                                            .add(General.USER_ID, Preferences.get(General.USERID))
+                                            .add(General.KEY, keyMap.get(General.KEY))
+                                            .add(General.TOKEN, keyMap.get(General.TOKEN))
+                                            .build();
+                                    String responseLogout = MakeCall.post(Preferences.get(General.DOMAIN) + "/" + Urls_.LOGOUT_URL, logoutBody, TAG, activity.getApplicationContext(), activity);
+                                    if (responseLogout != null) {
+
+
+                                        Intent loginIntent = new Intent(activity.getApplicationContext(), LoginActivity.class);
+                                        loginIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                                        activity.startActivity(loginIntent);
+                                        activity.finish();
+                                    }
+                                } else if (object.has(General.STATUS) && object.get(General.STATUS).getAsInt() == 20) {
+                                    final String appPackageName = _context.getPackageName(); // getPackageName() from Context or Activity object
+                                    try {
+                                        _context.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=" + appPackageName)));
+                                    } catch (android.content.ActivityNotFoundException anfe) {
+                                        _context.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=" + appPackageName)));
+                                    }
+                                } else {
+                                    return res;
+                                }
+                            } catch (Exception e) {
+                                e.printStackTrace();
+                            }
+                        } else {
+                            return res;
+                        }
+                    } else {
+                        if (jsonObject.has(General.STATUS) && jsonObject.getInt(General.STATUS) == 13) {
+                            return "13";
+                        } else {
+                            return null;
+                        }
+                    }
                 }
             } catch (IOException | JSONException e) {
                 e.printStackTrace();
@@ -251,7 +300,6 @@ public class NetworkCall_ {
     private static String getToken(Context _context) {
         String access_token = null;
         Token_ token;
-
         OauthPreferences.initialize(_context);
         String i = OauthPreferences.get(Oauth.EXPIRES_AT);
         try {
@@ -276,12 +324,12 @@ public class NetworkCall_ {
     }
 
     // make final url with encrypted parameters and agent name
-    private static RequestBody finalBody(String mainBody, String token) {
+    private static RequestBody finalBody(String mainBody) {
         FormBody.Builder formBuilder = new FormBody.Builder();
         formBuilder
                 .add("akujs", UrlEncoder_.encrypt(mainBody))
-                .add("d", "a")
-                .add(Oauth.ACCESS_TOKEN, token);
+                .add("d", "a");
+
         return formBuilder.build();
     }
 
@@ -303,7 +351,7 @@ public class NetworkCall_ {
         HashMap<String, String> keyMap = KeyMaker_.getKey();
         map.put(General.TOKEN, keyMap.get(General.TOKEN));
         map.put(General.KEY, keyMap.get(General.KEY));
-        map.put(General.USER_ID, Preferences.get(General.USER_ID)); //logged in user id
+        map.put(General.USER_ID, Preferences.get(General.USERID)); //logged in user id
         map.put(General.TIMEZONE, Preferences.get(General.TIMEZONE));
         map.put(General.DOMAIN_CODE, Preferences.get(General.DOMAIN_CODE));
         Set keys = map.keySet();

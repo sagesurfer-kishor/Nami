@@ -1,6 +1,10 @@
 <resources>
     <string name="app_name">Nami</string>
 
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_settings">Settings</string>
+
     <string name="runtime_permissions_txt">Please enable ALL permissions from app settings.</string>
     <string name="register">REGISTER</string>
     <string name="don_t_have_an_account">Don\'t have an account?</string>
@@ -17,6 +21,31 @@
     <string name="crisis_hotline">Crisis Hotline:</string>
     <string name="forget_password">Forget Password?</string>
     <string name="user_id">User ID</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="i_accept_terms_and_conditionds">I accept terms and conditionds</string>
+    <string name="username_password_not_match">Wrong user id and password</string>
+    <string name="wrong_email">You enter an wrong email-Id</string>
+
+    <string name="invalid_login"></string>
+    <string name="action_failed"></string>
+    <string name="logout" />
+    <string name="language">English</string>
+    <string name="save">save</string>
+    <string name="old_password">Old Password</string>
+    <string name="new_password">New Password</string>
+    <string name="update">Update</string>
+    <string name="to_do_list">To Do List</string>
+    <string name="positive_quotes">Positive Quotes</string>
+    <string name="stories_of_hope">Stories of hope</string>
+    <string name="home">Home</string>
+    <string name="assignment">Assignment</string>
+    <string name="journal">journal</string>
+    <string name="mood">mood</string>
+    <string name="calender">calender</string>
+    <string name="statistics">statistics</string>
+    <string name="name">Name</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="successful">successful</string>
 
 
 </resources>

@@ -5,11 +5,30 @@
     <color name="green">#05D39B</color>
     <color name="vividorange">#f9ba0a</color>
     <color name="vividred">#EF1E48</color>
+    <color name="vividblue">#5DA3FD</color>
+    <color name="vividblueloogn">#4BE3FB</color>
+
+    <color name="vividscreamin">#4BFD92</color>
+    <color name="yello">#FFE84B</color>
+
+
+    <color name="vividper">#E44BFC</color>
+
     <color name="white1">#FFFFFF</color>
     <color name="text_color_tertiary">#1E2C31</color>
+    <color name="black">#000000</color>
+    <color name="transparent">@android:color/transparent</color>
 
+    <color name="transparent_40">#000000</color>
+    <color name="warning_text_color">#e63333</color>
 
+    <color name="active_crisis">#FE2F59</color>
+
+    <color name="list_selector">#ededed</color>
     <color name="colorPrimary">#6200EE</color>
     <color name="colorPrimaryDark">#3700B3</color>
     <color name="colorAccent">#03DAC5</color>
+    <color name="snack_bar_background_color">#ededed</color>
+    <color name="text_color_green">#22d369</color>
+
 </resources>

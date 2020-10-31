@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg_img"
@@ -29,12 +30,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
+            android:layout_marginRight="5dp"
             android:layout_toRightOf="@id/txtHotlineTiltle_user_login"
             android:hint="1-800-273-8255"
-            android:layout_marginRight="5dp"
             android:textColor="@color/white"
             android:textSize="18sp"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
 
     </RelativeLayout>
 
@@ -55,21 +56,21 @@
         android:textSize="30sp" />
 
     <EditText
-        android:id="@+id/edUserId_login_user"
+        android:id="@+id/edEmail_login_user"
         android:layout_width="297dp"
         android:layout_height="45dp"
         android:layout_gravity="center"
         android:layout_marginTop="34dp"
         android:background="@drawable/white_rounded_rectangle"
         android:gravity="start|center_vertical"
-        android:hint="@string/user_id"
+        android:hint="@string/email_id"
         android:imeOptions="actionDone"
-        android:inputType="number"
-        android:maxLength="8"
+        android:inputType="textEmailAddress"
+
         android:paddingStart="27dp"
         android:paddingEnd="27dp"
         android:singleLine="true"
-        android:textColor="@color/colorPrimary"
+        android:textColor="@color/text_color_tertiary"
         android:textColorHint="@color/text_color_tertiary" />
 
     <EditText
@@ -87,7 +88,7 @@
         android:paddingStart="27dp"
         android:paddingEnd="27dp"
         android:singleLine="true"
-        android:textColor="@color/colorPrimary"
+        android:textColor="@color/text_color_tertiary"
         android:textColorHint="@color/text_color_tertiary" />
 
     <LinearLayout
@@ -99,7 +100,7 @@
         android:weightSum="1">
 
         <CheckBox
-            android:id="@+id/chkReminderme_login_user"
+            android:id="@+id/chkRememberme_login_user"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="0.5"

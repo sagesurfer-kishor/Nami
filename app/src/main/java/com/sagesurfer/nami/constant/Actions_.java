@@ -6,7 +6,9 @@ import java.io.Serializable;
 
 public class Actions_ {
 
-    public static final String GET_INSTANCES = "get_instances";
+    public static final String ADD_FRIEND = "add_friend";
+
+    public static final String HOTLINE = "get_mobilehotline";
     public static final String WALL_FEEDS = "wall_feeds";
     public static final String GET_FEED = "get_feeds";
     public static final String GET_USER_DATA = "get_user_data";
@@ -91,7 +93,7 @@ public class Actions_ {
     public static final String ADMIN_ACTIVITY = "admin_activity";
     public static final String SUPPORT = "support";
     public static final String FETCH_USER_DETAILS = "fetch_user_details";
-    public static final String RESET_PASSWORD = "reset_password";
+    public static final String RESET_PASSWORD = "change_password";
     public static final String DELETE_INVITATION = "delete_invitation";
 
     public static final String FMS = "fms";

@@ -15,7 +15,6 @@ public class OauthPreferences {
     private static SharedPreferences preferences;
     private static SharedPreferences.Editor editor;
 
-    @SuppressLint("ApplySharedPref")
     public static void initialize(Context _context) {
         if (null == preferences) {
             preferences = _context.getApplicationContext()

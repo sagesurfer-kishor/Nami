@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <item
+        android:id="@+id/menu_mood"
+        android:icon="@drawable/btm_menu_gray_setmood"
+
+        android:title="Set Mood"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/menu_calender"
+        android:icon="@drawable/calendar_gray"
+
+        android:title="Calender"
+        app:showAsAction="always" />
+</menu>

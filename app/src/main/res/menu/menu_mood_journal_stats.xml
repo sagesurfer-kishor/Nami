@@ -1,0 +1,16 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <item
+        android:id="@+id/menu_journal"
+        android:icon="@drawable/btm_menu_gray_journal"
+
+        android:title="Journal"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/menu_statistics"
+        android:icon="@drawable/btm_menu_gray_statistics"
+        android:title="Statistics"
+        app:showAsAction="always" />
+</menu>

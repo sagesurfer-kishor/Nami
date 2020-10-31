@@ -8,4 +8,8 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="CustomFontStylePrimary">
+        <item name="android:fontFamily">@font/gotham_medium</item>
+    </style>
+
 </resources>

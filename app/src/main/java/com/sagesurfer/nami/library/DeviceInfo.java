@@ -10,14 +10,20 @@ import android.net.wifi.WifiInfo;
 import android.net.wifi.WifiManager;
 import android.os.Build;
 import android.provider.Settings;
- import android.telephony.TelephonyManager;
+import android.telephony.TelephonyManager;
 import android.text.TextUtils;
 
+import androidx.annotation.RequiresApi;
 import androidx.core.app.ActivityCompat;
 
 import java.util.Calendar;
 import java.util.TimeZone;
 
+/**
+ * @author Monika M (monikam@sagesurfer.com)
+ * Created on 13/03/2018
+ * Last Modified on
+ */
 
 /*
  * Get complete device information in one string
@@ -132,7 +138,7 @@ public class DeviceInfo {
         return wInfo.getMacAddress();
     }
 
-    @SuppressLint("HardwareIds")
+    @SuppressLint({"HardwareIds", "MissingPermission"})
     public static String getImei(Activity activity) {
         TelephonyManager tManager = (TelephonyManager) activity.getBaseContext().getSystemService(Context.TELEPHONY_SERVICE);
         if (ActivityCompat.checkSelfPermission(activity, Manifest.permission.READ_PHONE_STATE) != PackageManager.PERMISSION_GRANTED) {
@@ -156,6 +162,7 @@ public class DeviceInfo {
 
     @SuppressLint("HardwareIds")
     public static String getDeviceId(Context _context) {
+
         return Settings.Secure.getString(_context.getContentResolver(), Settings.Secure.ANDROID_ID);
     }
 
@@ -165,7 +172,7 @@ public class DeviceInfo {
         return tz.getID();
     }
 
-    @SuppressLint("HardwareIds")
+    @SuppressLint({"HardwareIds", "MissingPermission"})
     public static String getDeviceIMEI(Activity activity) {
         String deviceUniqueIdentifier = null;
         TelephonyManager tm = (TelephonyManager) activity.getSystemService(Context.TELEPHONY_SERVICE);

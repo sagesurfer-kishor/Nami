@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_img"
+    android:orientation="vertical">
+
+    <include layout="@layout/main_toolbar_layout" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="21dp"
+        android:layout_marginRight="21dp"
+        android:gravity="center"
+
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:layout_marginTop="23dp">
+
+            <ImageView
+                android:id="@+id/nav_header_image"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_user_male" />
+        </RelativeLayout>
+
+        <EditText
+            android:id="@+id/edFirstName_editprofile_user"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="29dp"
+            android:autofillHints=""
+            android:background="@drawable/white_rounded_rectangle"
+            android:hint="@string/first_name"
+            android:imeOptions="actionNext"
+            android:inputType="text"
+            android:maxLength="18"
+            android:paddingStart="27dp"
+            android:paddingEnd="27dp"
+            android:singleLine="true"
+            android:textColor="@color/text_color_tertiary"
+            android:textColorHint="@color/text_color_tertiary" />
+
+        <EditText
+            android:id="@+id/edLastName_editprofile_user"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="19dp"
+            android:autofillHints=""
+            android:background="@drawable/white_rounded_rectangle"
+            android:hint="@string/last_name"
+            android:imeOptions="actionNext"
+            android:inputType="text"
+            android:maxLength="18"
+            android:paddingStart="27dp"
+            android:paddingEnd="27dp"
+            android:singleLine="true"
+            android:textColor="@color/text_color_tertiary"
+            android:textColorHint="@color/text_color_tertiary" />
+
+        <EditText
+            android:id="@+id/edEmail_editprofile_user"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="19dp"
+            android:autofillHints=""
+            android:background="@drawable/white_rounded_rectangle"
+            android:hint="@string/email_id"
+            android:imeOptions="actionNext"
+            android:inputType="textEmailAddress"
+            android:paddingStart="27dp"
+            android:paddingEnd="27dp"
+            android:singleLine="true"
+            android:textColor="@color/text_color_tertiary"
+            android:textColorHint="@color/text_color_tertiary" />
+
+        <EditText
+            android:id="@+id/edmobileNumber_editprofile_user"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="19dp"
+            android:autofillHints=""
+            android:background="@drawable/white_rounded_rectangle"
+            android:hint="@string/mobile_number"
+            android:imeOptions="actionNext"
+            android:inputType="number"
+            android:paddingStart="27dp"
+            android:paddingEnd="27dp"
+            android:singleLine="true"
+            android:textColor="@color/text_color_tertiary"
+            android:textColorHint="@color/text_color_tertiary" />
+
+        <Button
+            android:id="@+id/btnSave_editprofile"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="29dp"
+            android:background="@drawable/green_rounded_rectangle"
+            android:text="@string/save"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+
+        <TextView
+            android:id="@+id/btnChangePassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="29dp"
+            android:text="CHANGE PASSWORD"
+            android:textColor="@color/green"
+            android:textSize="18sp" />
+
+
+    </LinearLayout>
+</LinearLayout>

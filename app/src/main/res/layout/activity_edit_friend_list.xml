@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="15dp"
+                android:padding="10dp"
+                android:text="Add New Friend"
+                android:textColor="@color/text_color_tertiary" />
+
+            <EditText
+                android:id="@+id/edFriend_name"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/edittext_rounded_border"
+                android:gravity="start|center_vertical"
+                android:hint="@string/name"
+                android:imeOptions="actionDone"
+                android:inputType="textEmailAddress"
+
+                android:paddingStart="27dp"
+                android:paddingEnd="27dp"
+                android:singleLine="true"
+                android:textColor="@color/text_color_tertiary"
+                android:textColorHint="@color/text_color_tertiary" />
+
+            <EditText
+
+                android:id="@+id/edFriend_phone_number"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/edittext_rounded_border"
+                android:gravity="start|center_vertical"
+                android:hint="@string/phone_number"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                android:paddingStart="27dp"
+                android:paddingEnd="27dp"
+                android:singleLine="true"
+                android:textColor="@color/text_color_tertiary"
+                android:textColorHint="@color/text_color_tertiary" />
+
+
+            <Button
+                android:id="@+id/btnadd_friend_call_list"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/green_rounded_rectangle"
+                android:text="@string/submit"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

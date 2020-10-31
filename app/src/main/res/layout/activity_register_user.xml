@@ -70,48 +70,51 @@
 
 
     <EditText
-
+        android:id="@+id/edPassword_register_user"
         android:layout_width="297dp"
         android:layout_height="45dp"
         android:layout_gravity="center"
         android:layout_marginTop="45dp"
         android:autofillHints=""
         android:background="@drawable/white_rounded_rectangle"
-        android:hint="@string/email_id"
+        android:hint="@string/password"
         android:imeOptions="actionNext"
-        android:inputType="text"
+        android:inputType="textPassword"
         android:maxLength="18"
         android:paddingStart="27dp"
         android:paddingEnd="27dp"
         android:singleLine="true"
-        android:textColor="@color/colorPrimary"
+        android:textColor="@color/text_color_tertiary"
         android:textColorHint="@color/text_color_tertiary" />
 
     <EditText
+        android:id="@+id/edconfirm_password_register_user"
         android:layout_width="297dp"
         android:layout_height="45dp"
         android:layout_gravity="center"
         android:layout_marginTop="19dp"
         android:autofillHints=""
         android:background="@drawable/white_rounded_rectangle"
-        android:hint="@string/mobile_number"
+        android:hint="@string/confirm_password"
         android:imeOptions="actionNext"
-        android:inputType="text"
+        android:inputType="textPassword"
         android:maxLength="18"
         android:paddingStart="27dp"
         android:paddingEnd="27dp"
         android:singleLine="true"
-        android:textColor="@color/colorPrimary"
+        android:textColor="@color/text_color_tertiary"
         android:textColorHint="@color/text_color_tertiary" />
 
     <CheckBox
+        android:id="@+id/chkterms_condition_register_user"
         android:layout_width="297dp"
-        android:layout_height="45dp"
+        android:layout_height="40dp"
         android:layout_gravity="center"
         android:layout_marginTop="16dp"
+        android:button="@drawable/chk_remember_me"
         android:gravity="center_vertical"
         android:paddingLeft="10dp"
-        android:text="I accept terms and conditionds"
+        android:text="@string/i_accept_terms_and_conditionds"
         android:textColor="@color/white"
         android:textSize="14sp" />
 

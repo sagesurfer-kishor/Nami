@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_gravity="center"
@@ -33,6 +34,7 @@
         android:textSize="14sp" />
 
     <EditText
+        android:id="@+id/eduser_verify_code"
         android:layout_width="297dp"
         android:layout_height="45dp"
         android:layout_gravity="center"
@@ -46,10 +48,11 @@
         android:paddingStart="27dp"
         android:paddingEnd="27dp"
         android:singleLine="true"
-        android:textColor="@color/colorPrimary"
+        android:textColor="@color/text_color_tertiary"
         android:textColorHint="@color/text_color_tertiary" />
 
     <ImageView
+        android:id="@+id/imgVerify_qrcode"
         android:layout_width="102dp"
         android:layout_height="102dp"
         android:layout_gravity="center"
@@ -77,4 +80,15 @@
         android:text="CANCEL"
         android:textColor="@color/vividorange"
         android:textSize="18sp" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/login_user_anim_view"
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:layout_gravity="bottom|center"
+        android:layout_marginTop="30dp"
+        android:visibility="gone"
+        app:lottie_autoPlay="true"
+        app:lottie_colorFilter="@color/colorPrimary" />
+
 </LinearLayout>
